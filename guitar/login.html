@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" href="css/common.css"/>
+  <link rel="stylesheet" href="css/mycss.css"/>
+</head>
+<body>
+<!--header-->
+<div class="header_box"></div>
+<!--页面主体-->
+<!--视频区-->
+<video src="video/snow.mp4" autoplay loop class="login_box" width="100%" height="600px">
+  您的浏览器不支持视频播放！
+</video>
+  <div class="container">
+    <!--登录框-->
+    <div class="login">
+      <h2>用户登录</h2>
+      <dl class="clearfloat">
+        <dt><span class="tips" id="uname_prompt_text"></span>用户名：</dt>
+        <dd>
+          <input type="text" id="uname" placeholder="邮箱/手机号"/>
+          <em class="icon_user"></em>
+          <i class="icon_error" id="uname_prompt_icon"></i>
+        </dd>
+      </dl>
+      <dl>
+        <dt><span class="tips" id="upwd_prompt_text"></span>密码：</dt>
+        <dd>
+          <input type="password" id="upwd" placeholder="密码"/>
+          <em class="icon_pwd"></em>
+          <i class="icon_error" id="upwd_prompt_icon"></i>
+        </dd>
+      </dl>
+      <p><lable>
+        <input type="checkbox"/>
+        <span>自动登录</span>
+      </lable></p>
+      <button type="button" id="login">立 即 登 录</button>
+    </div>
+  </div>
+<!--footer-->
+<footer class="footer"></footer>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
+
+
+
+
+
+

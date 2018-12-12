@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" href="css/common.css"/>
+  <link rel="stylesheet" href="css/mycss.css"/>
+</head>
+<body>
+<!--header-->
+<div class="header_box"></div>
+<!--面包屑导航-->
+<div class="breadcrumb">
+  <div class="container">
+    <h2>
+      <a href="">首页</a>&gt;<a href="">关于吉他中国</a>
+    </h2>
+  </div>
+</div>
+<!--页面主体-->
+<div class="main container">
+  <div class="about">
+    <div class="about_img"><img src="images/gsjj.jpg" alt=""/></div>
+    <p>吉他中国与星光现场从2007年开始将于每月月末推出“FortheloveofGuitar吉他之爱”系列音乐现场专场音乐会活动！2007年3月25日：“FortheloveofGuitar吉他之爱”系列音乐现场第1场开幕式在星光现场隆重上演，参加的是吉他中国最佳组合团队：汶麟、克尔曼、姚林、夏炎；</p>
+    <p>M fresh 含义</p>
+    <p>吉他中国除了举办多场世界吉他手在中国的演出活动和国内乐手的演出活动外，还为国内外乐器厂商承办了各种乐器演示活动</p>
+    <p>吉他中国.龙琴音乐培训中心是由吉他中国网站下属的专业乐器教学与培训部门，培训中心师资力量强大，汶麟、陈磊、姚琳、羊力等众多国内著名乐手担纲各专业指导，形成庞大的专业培训团队。并且采用一对一小班教学，直接言传身教，以乐手带乐手，争取涌现更多的优秀乐手。</p>
+    <p>琴国乐器为吉他中国网站下属的专业销售网站，专门从事乐器在线零售、批发等电子商务活动，琴国乐器以网站为依托，以独立经营为方向，专门从事乐器销售服务。</p>
+    <p>吉他中国——自足中国 走遍世界 做有责任心的民族品牌!</p>
+    <p>吉他中国文化</p>
+    <p>"创新、高效、服务"是净美仕企业文化的DNA，面临着新的发展机遇，吉他中国秉持"人才发展"和"给客户发展空间"两大战略，不断创新探索，用快乐颠覆生活，打造员工、用户和合作伙伴共同分享的"创业天地"。</p>
+    <p>"创新、高效、服务"是净美仕企业文化的DNA，是每个吉他人所共有的文化基因。</p>
+  </div>
+</div>
+
+
+<!--footer-->
+<footer class="footer"></footer>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/main.js"></script>
+<script>
+  $(function(){
+    //加载页面头部
+    $(".header_box").load('header.html',function(){
+      main();
+      navText("关于净美仕");
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+

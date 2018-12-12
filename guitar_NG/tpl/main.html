@@ -1,0 +1,68 @@
+
+<div ng-include="'tpl/include/header.html' "  class="header_box"></div>
+
+<div class="main_box">
+    <div id="refresh_carousel" class="carousel slide" data-ride="carousel"  data-interval="3000">
+        <div class="carousel-inner">
+            <div class="item"  ng-class="$index==0?'active':''" ng-repeat="img in imgList">
+                <img ng-src={{img}} alt="...">
+            </div>
+
+            <!--<div class="item active">-->
+                <!--<img src="images/banner_01.jpg" alt="...">-->
+            <!--</div>-->
+            <!--<div class="item">-->
+                <!--<img src="images/banner_02.jpg" alt="...">-->
+            <!--</div>-->
+            <!--<div class="item">-->
+                <!--<img src="images/banner_03.jpg" alt="...">-->
+            <!--</div>-->
+            <!--<div class="item">-->
+                <!--<img src="images/banner_04.jpg" alt="...">-->
+            <!--</div>-->
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#refresh_carousel" ng-repeat="img in imgList" data-slide-to="{{$index}}" ng-class="$index==0?'active':''"></li>
+            <!--<li data-target="#refresh_carousel" data-slide-to="0"></li>-->
+            <!--<li data-target="#refresh_carousel" data-slide-to="1"></li>-->
+            <!--<li data-target="#refresh_carousel" data-slide-to="2"></li>-->
+            <!--<li data-target="#refresh_carousel" data-slide-to="3"></li>-->
+        </ol>
+        <a class="left carousel-control" data-target="#refresh_carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-target="#refresh_carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="main container">
+        <div class="ind_con1">
+            <h2 class="title"><a href="#" class="more">more</a>净美仕产品</h2>
+            <ul class="clearfloat">
+                <li><a href="#" class="link"><img src="images/01.jpg" alt=""/></a></li>
+                <li><a href="#" class="link"><img src="images/02.jpg" alt=""/></a></li>
+                <li><a href="#" class="link"><img src="images/03.jpg" alt=""/></a></li>
+            </ul>
+        </div>
+        <div class="ind_con2 clearfloat">
+            <div class="ind_about">
+                <h2 class="title"><a href="#" class="more">more</a>关于净美仕</h2>
+                <p>北京净美仕环境科技有限公司自诞生起一直关注人类呼吸健康的问题，并专注于室内空气质量的研究与改善。2003年，非典来袭，环境安全威胁到了每个人的生命，全国陷入一片恐慌。净美仕肩负着为人类创造健康安全生活环境的使命应运而生。2012年7月，亿朗以“净美仕(Mfresh)”为品牌重塑，以崭新的面貌屹立在净化行业。 <a
+                        href="#">查看更多</a></p>
+            </div>
+            <div class="ind_news">
+                <h2 class="title"><a href="#" class="more">more</a>公司动态</h2>
+                <ul>
+                    <li ng-repeat="news in newsList">
+                        <span>{{news.pubTime|date:'yyyy-MM-dd'}}</span><a href="">{{news.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"  class="footer"></div>

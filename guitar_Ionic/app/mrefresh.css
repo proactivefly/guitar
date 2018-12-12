@@ -1,0 +1,164 @@
+/*header中的logo*/
+.bar-stable .title img{
+    vertical-align: middle;
+}
+
+/*轮播图*/
+.slider-slides > .item{
+    border:1px solid #ccc;
+    background-color: #D9D9D9;
+    margin:0;
+}
+.slider-slides > .item > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border:0;
+}
+.slider-pager{
+    z-index:100;
+}
+.slider-pager .slider-pager-page{
+    color:orangered;
+}
+
+/*主页内容*/
+.row{
+    margin:0;
+    padding:0;
+}
+.row > .col img{
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+}
+.card.index{
+    margin:10px 5px 15px 5px;
+    font:12px 'microsoft yahei';
+}
+.index-title.icon:before {
+    font-size: 24px;
+    line-height: 20px;
+    margin-right:5px;
+}
+.index .item-divider{
+ padding:5px 8px;
+}
+.index-title{
+    font-size:16px;
+    font-weight:bold;
+}
+.card.index .item{
+    padding:0px;
+}
+.index_about{
+    text-indent: 20px;
+    line-height:25px;
+}
+.index_about>a{
+    color:#0066cc;
+    text-decoration: underline;
+    float:right;
+}
+.index_news>li{
+    padding-left: 25px !important;
+    background: url(../images/iconlist.png) 9px -207px no-repeat;
+    line-height: 32px;
+    border-bottom: 1px dotted #ccc;
+}
+.index_news>li>span {
+    font-size: 12px;
+    color: #999;
+    width: 80px;
+    float: right;
+}
+.index_news>li>a {
+    color: #555;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/*搜索弹出框出现的动画*/
+.modal{
+    width:60%;
+    min-height:80%;
+}
+/*搜索框本身的样式*/
+.search_box{
+    background: #444;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    padding:10px;
+    box-shadow:20px 12px 40px #666666;
+}
+.search_box>.list-inset {
+    max-height:90%;
+    margin: 5px;
+}
+.search_box>div>label{
+    padding-left:10px;
+}
+.slide-in-right{
+    left:40%;
+    transition: all ease-in-out 450ms;
+}
+
+/*要离开的元素动画结束时的样式*/
+.slide-in-right.ng-leave{
+    left:40%;
+}
+.slide-in-right.ng-leave.ng-leave-active {
+    left: 100%;
+}
+/*要进入的元素动画开始时的样式*/
+.slide-in-right.ng-enter {
+    left: 100%;
+}
+/*要进入的元素动画结束时的样式*/
+.slide-in-right.ng-enter.ng-enter-active {
+    left: 40%;
+}
+
+
+
+/*起始页*/
+.start_box{
+    width:100%;
+    height:100%;
+}
+.start_box>span{
+    font-size:12pt;
+    color:#f00;
+    font-weight:bold;
+    float:left;
+    margin:5px;
+ }
+.start_box>button{
+    float:right;
+    margin:5px;
+}
+.m_logo{
+    position: absolute;
+    margin: 0;
+    line-height: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    top: 20%;
+    margin-top: -2.5rem;
+}
+.m_img-full-width {
+    max-width: 100%;
+    position: absolute;
+    top: 20%;
+    margin-top: 2.5rem;
+}
+
+
+/*列表界面的样式*/
+.product_list{
+    margin-top:20px;
+}
+

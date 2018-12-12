@@ -1,0 +1,16 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-footer has-header content">
+    <div class="list product_list">
+        <a class="item item-thumbnail-left" ng-repeat="product in productData">
+            <img ng-src="{{product.pic}}">
+            <h2>{{product.title1}}</h2>
+            <p>{{product.title2}}</p>
+        </a>
+    </div>
+
+    <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+    </ion-infinite-scroll>
+    <p ng-hide='hasMore' class="text-center assertive">喵，到最后了</p>
+    <br/><br/>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

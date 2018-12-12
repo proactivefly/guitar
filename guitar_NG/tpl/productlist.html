@@ -1,0 +1,35 @@
+
+<div ng-include="'tpl/include/header.html' "  class="header_box"></div>
+
+<div class="main container">
+    <div class="pl_header">
+        <a href="#/list/1" ng-class="productData.type==1?'cur':''">净美仕净化器</a>
+        <a href="#/list/2" ng-class="productData.type==2?'cur':''">净美仕滤网</a>
+    </div>
+    <!-- 产品列表-->
+    <ul class="product_list clearfloat">
+        <li ng-repeat="product in productData.data">
+            <a href=""><img ng-src="{{product.pic}}" alt=""/></a>
+            <div class="pdlist_text clearfloat">
+                <h3>
+                    <p>{{product.model}}</p>
+                    <span>{{product.title1}}</span>
+                </h3>
+                <a href="#/detail/{{product.pid}}">查看详情</a>
+            </div>
+        </li>
+    </ul>
+    <!-- 分页导航-->
+    <div class="pages">
+        <button ng-disabled="productData.pageNum==1"
+                ng-click="getProductData(productData.pageNum-1,productData.type)">上一页</button>
+        <a href="" class="{{$index == productData.pageNum-1?'cur':''}}"
+           ng-repeat="index in pageArray"
+           ng-click="getProductData($index+1,productData.type)">{{index}}</a>
+        <button ng-disabled="productData.pageNum==productData.pageCount"
+                ng-click="getProductData(productData.pageNum+1,productData.type)">下一页</button>
+    </div>
+</div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"  class="footer"></div>

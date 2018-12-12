@@ -1,0 +1,62 @@
+<div ng-include="'tpl/include/header_all.html'"></div>
+<ion-content class="has-header has-footer content">
+        <!--使用ng的slide-box设置轮播-->
+        <ion-slide-box  auto-play="true" does-continue="true" slide-interval="30000"
+                        show-pager="true" pager-click="pageClick(index)">
+                <ion-slide class="item active">
+                        <img src="images/banner_01.jpg" alt=""/>
+                </ion-slide>
+                <ion-slide class="item">
+                        <img src="images/banner_02.jpg" alt=""/>
+                </ion-slide>
+                <ion-slide class="item">
+                        <img src="images/banner_03.jpg" alt=""/>
+                </ion-slide>
+                <ion-slide class="item">
+                        <img src="images/banner_04.jpg" alt=""/>
+                </ion-slide>
+        </ion-slide-box>
+
+        <!--主页内容-->
+        <div class="card index">
+                <div class="item item-divider">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title">净美仕产品</a>
+                </div>
+                <div class="item item-text-wrap">
+                        <div class="row">
+                                <div class="col">
+                                        <a href="#/list/1"><img src="images/index_01.jpg" alt=""/></a>
+                                </div>
+                                <div class="col">
+                                        <a  href="#/list/1"><img src="images/index_02.jpg" alt=""/></a>
+                                </div>
+                                <div class="col">
+                                        <a  href="#/list/2"><img src="images/index_03.jpg" alt=""/></a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="card index">
+                <div class="item item-divider">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title">关于净美仕</a>
+                </div>
+                <div class="item item-text-wrap">
+                        <p class="index_about">北京净美仕环境科技有限公司自诞生起一直关注人类呼吸健康的问题，并专注于室内空气质量的研究与改善。2003年，非典来袭，环境安全威胁到了每个人的生命，全国陷入一片恐慌。净美仕肩负着为人类创造健康安全生活环境的使命应运而生。2012年7月，亿朗以“净美仕(Mfresh)”为品牌重塑，以崭新的面貌屹立在净化行业<br/><a href="#">查看更多</a></p>
+                </div>
+        </div>
+        <div class="card index">
+                <div class="item item-divider">
+                        <a class="button button-small button-icon icon ion-star ion-left index-title">公司动态</a>
+                </div>
+                <div class="item item-text-wrap">
+                        <ul class="list index_news">
+                                <li class="item  item-icon-left" ng-repeat="news in newsList"><span>{{news.pubTime | date:'yyyy-MM-dd'}}</span><a href="">{{news.title}}</a></li>
+                        </ul>
+                </div>
+        </div>
+        <ion-infinite-scroll ng-if="hasMore" distance="10%" on-infinite="loadMore()">
+        </ion-infinite-scroll>
+        <p ng-hide='hasMore' class="text-center assertive">没有更多数据可以加载了</p>
+        <br/><br/>
+</ion-content>
+<div ng-include="'tpl/include/footer_all.html'"></div>

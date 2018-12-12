@@ -1,0 +1,13 @@
+<ion-modal-view ng-controller="indexCtrl">
+    <div class="search_box">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="inputTxt.kw">
+            </label>
+        </div>
+        <ul class="list  list-inset">
+            <li class="item" ng-repeat="p in searchList">{{p.title1}}</li>
+        </ul>
+    </div>
+</ion-modal-view>

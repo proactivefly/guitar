@@ -1,0 +1,50 @@
+
+<div ng-include="'tpl/include/header.html' "  class="header_box"></div>
+
+<!--面包屑导航-->
+<div class="breadcrumb">
+    <h2>
+        <a href="#/main">首页</a>&gt;<a href="#/list/1">产品中心</a>&gt;<a href="">净美仕净化器</a>
+    </h2>
+</div>
+
+<div class="main container">
+    <div class="cart">
+        <div class="cart_header">
+            <span>已选商品<em>{{selectedCount}}</em>件</span>
+            <span>总金额：<strong>{{totalPrice|number:2}}</strong></span>
+            <button type="button">结算</button>
+        </div>
+        <div class="cart_con">
+            <div class="cartcon_title">
+                <span><input type="checkbox" ng-model="chkAll"/> 全选</span>
+                <span>商品信息</span>
+                <span>单价</span>
+                <span>数量</span>
+                <span>金额</span>
+                <span>操作</span>
+            </div>
+            <ul>
+                <h2 ng-show="cartCount==0">购物车中没有任何商品！</h2>
+                <li ng-repeat="item in cart">
+                    <input ng-checked="chkAll" ng-model="isSelect" ng-change="getSum(isSelect,$index)" type="checkbox" class="cart_checkbox"/>
+                    <a href="" class="cart_img"><img ng-src="{{item.pic}}" alt=""/></a>
+                    <a href="" class="cart_title">{{item.title1}}</a>
+                    <i>{{item.price}}</i>
+                    <div>
+                        <span>-</span><input type="text" value="{{item.count}}"/><span>+</span>
+                    </div>
+                    <strong>{{item.price*item.count}}</strong>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+        <div class="cart_header">
+            <span>已选商品<em>{{selectedCount}}</em>件</span>
+            <span>总金额：<strong>{{totalPrice|number:2}}</strong></span>
+            <button type="button">结算</button>
+        </div>
+    </div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"  class="footer"></div>
